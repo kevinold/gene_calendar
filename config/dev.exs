@@ -12,7 +12,7 @@ config :gene_calendar, GeneCalendar.Endpoint,
   code_reloader: true,
   cache_static_lookup: false,
   check_origin: false,
-  watchers: [{Path.expand("webpack.devserver.js"), []}]
+  watchers: [{"node", ["webpack.devserver.js"]}]
 
 # Watch static and templates for browser reloading.
 config :gene_calendar, GeneCalendar.Endpoint,
