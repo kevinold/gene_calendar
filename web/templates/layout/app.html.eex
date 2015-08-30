@@ -26,6 +26,10 @@
       <%= @inner %>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <%= if Mix.env == :dev do %>
+      <script src='http://localhost:4001/wp_bundle.js'></script>
+    <% else %>
+      <script src="<%= static_path(@conn, "/js/wp_bundle.js") %>"></script>
+    <% end %>
   </body>
 </html>
