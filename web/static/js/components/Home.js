@@ -16,15 +16,13 @@ class Home extends Component {
     const actions = bindActionCreators(HomeActions, dispatch);
 
     let entryList = entries.map((entry, index) => {
-      return <li key={entry.id}>{entry.title}</li>
+      return <li className="list-group-item" key={entry.id}>{entry.title}</li>
     });
 
     return (
-      <main>
-        <ul>
+        <div className="list-group">
          {entryList}
-        </ul>
-      </main>
+        </div>
     );
   }
 }
