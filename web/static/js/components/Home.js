@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as HomeActions from '../actions/HomeActions';
 import styles from '../../css/app.css';
+import DevotionList from './DevotionList';
 
 class Home extends Component {
   componentWillMount() {
@@ -15,14 +16,10 @@ class Home extends Component {
     const {devotions, title, dispatch} = this.props;
     const actions = bindActionCreators(HomeActions, dispatch);
 
-    let devotionList = devotions.map((entry, index) => {
-      return <li className="list-group-item" key={entry.id}>{entry.title}</li>
-    });
-
     return (
-        <div className="list-group">
-         {devotionList}
-        </div>
+      <div>
+      <DevotionList {...this.props} />
+      </div>
     );
   }
 }
