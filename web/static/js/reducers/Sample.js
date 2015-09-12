@@ -7,7 +7,7 @@ let defaultState = {
       id: 1,
       title: 'Jesus is the Gravy to our biscuit',
       description: 'Jesus gives us joy when we come to him with our problems.',
-      verses: [{
+      scriptures: [{
         display: "James 1:1",
         book: "James",
         chapter: 1,
