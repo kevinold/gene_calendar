@@ -6,3 +6,13 @@ export function changeTitle(text) {
     text
   }
 }
+
+/*export function requestInitialData() {
+  return (dispatch, getState) => {
+    return dispatch(requestInitialData());
+  };
+}
+
+// Fetches data and relies on Redux Thunk middleware.
+export function fetchData() {
+}*/
