@@ -12,19 +12,25 @@ class Home extends Component {
   }
 
   render() {
-    const {entries, title, dispatch} = this.props;
+    const {devotions, title, dispatch} = this.props;
     const actions = bindActionCreators(HomeActions, dispatch);
 
-    let entryList = entries.map((entry, index) => {
+    let devotionList = devotions.map((entry, index) => {
       return <li className="list-group-item" key={entry.id}>{entry.title}</li>
     });
 
     return (
         <div className="list-group">
-         {entryList}
+         {devotionList}
         </div>
     );
   }
 }
 
-export default connect(state => state.Sample)(Home)
+function mapStateToProps(state) {
+  return {
+    devotions: state.devotions.entries
+  }
+}
+
+export default connect(mapStateToProps)(Home)

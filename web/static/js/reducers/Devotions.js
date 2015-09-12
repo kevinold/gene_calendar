@@ -23,7 +23,7 @@ let defaultState = {
   ]
 };
 
-export default function(state = defaultState, action) {
+export default function devotions(state = defaultState, action) {
   switch (action.type) {
     case ActionTypes.TITLE_CHANGED:
       return {...state, title: action.text};
