@@ -1,9 +1,9 @@
-import {TITLE_CHANGED} from '../constants/ActionTypes';
+import {SHOW_DEVOTION} from '../constants/ActionTypes';
 
-export function changeTitle(text) {
+export function showDevotion(index) {
   return {
-    type: TITLE_CHANGED,
-    text
+    type: SHOW_DEVOTION,
+    index: index
   }
 }
 

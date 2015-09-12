@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
+import DevotionListItem from './DevotionListItem';
 
 class DevotionList extends Component {
 
   render() {
-    const {devotions, dispatch} = this.props;
+    const {devotions, actions} = this.props;
 
-    let devotionList = devotions.map((entry, index) => {
-      return <li className="list-group-item" key={entry.id}>{entry.title}</li>
+    let devotionList = devotions.map((devotion, index) => {
+      return <DevotionListItem key={devotion.id} devotion={devotion} actions={actions} />
     });
 
     return (
       <div className="list-group">
-      {devotionList}
+        {devotionList}
       </div>
     );
   }

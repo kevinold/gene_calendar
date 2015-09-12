@@ -18,7 +18,7 @@ class Home extends Component {
 
     return (
       <div>
-      <DevotionList {...this.props} />
+      <DevotionList actions={actions} {...this.props} />
       </div>
     );
   }
