@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "babel-runtime": "^5.8.20",
+    "immutable": "^3.7.5",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-redux": "^2.1.2",
