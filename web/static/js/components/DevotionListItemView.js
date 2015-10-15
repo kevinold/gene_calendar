@@ -15,8 +15,8 @@ class DevotionListItemView extends Component {
 
     return (
       <div className="list-group-item">
-        <h2>{devotion.title}</h2>
-        <h3>{devotion.description}</h3>
+        <h2>{devotion.get('title')}</h2>
+        <h3>{devotion.get('description')}</h3>
 
 
       </div>

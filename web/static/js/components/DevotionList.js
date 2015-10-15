@@ -7,7 +7,7 @@ class DevotionList extends Component {
     const {devotions, actions} = this.props;
 
     let devotionList = devotions.map((devotion, index) => {
-      return <DevotionListItem key={devotion.id} devotion={devotion} actions={actions} />
+      return <DevotionListItem key={devotion.get('id')} devotion={devotion} actions={actions} />
     });
 
     return (

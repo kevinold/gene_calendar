@@ -7,14 +7,14 @@ class DevotionListItem extends Component {
   }
 
   onClick() {
-    this.props.actions.showDevotion(this.props.devotion.id);
+    this.props.actions.showDevotion(this.props.devotion.get('id'));
   }
 
   render() {
     const {devotion} = this.props;
 
     return (
-      <li className="list-group-item" key={devotion.id} onClick={this.onClick}>{devotion.title}</li>
+      <li className="list-group-item" key={devotion.get('id')} onClick={this.onClick}>{devotion.get('title')}</li>
     );
   }
 }

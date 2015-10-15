@@ -35,8 +35,8 @@ class Home extends Component {
 
 function mapStateToProps(state) {
   return {
-    devotions: state.devotions.entries,
-    devotion: state.devotions.devotion
+    devotions: state.devotions.get('entries'),
+    devotion: state.devotions.get('devotion')
   }
 }
 

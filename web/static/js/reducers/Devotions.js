@@ -1,6 +1,8 @@
 import * as ActionTypes from '../constants/ActionTypes';
+import Immutable from 'immutable';
 
-let defaultState = {
+let defaultState = Immutable.fromJS({
+  devotion: undefined,
   title: 'Home',
   entries: [
     {
@@ -21,15 +23,15 @@ let defaultState = {
       }]
     }
   ]
-};
+});
 
 export default function devotions(state = defaultState, action) {
   switch (action.type) {
-    case ActionTypes.TITLE_CHANGED:
-      return {...state, title: action.text};
     case ActionTypes.SHOW_DEVOTION:
       var devotion = state.entries[action.index - 1];
-      return {...state, devotion: devotion};
+      return state.merge({
+        devotion: devotion
+      });
     default:
       return state;
   }
